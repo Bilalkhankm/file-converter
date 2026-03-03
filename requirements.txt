@@ -1,0 +1,46 @@
+# ╔══════════════════════════════════════════════════════════════════════════╗
+# ║  AI File Converter Pro — requirements.txt                               ║
+# ║                                                                          ║
+# ║  INSTALL:   pip install -r requirements.txt                              ║
+# ║                                                                          ║
+# ║  SYSTEM DEPS (Ubuntu/Debian — run once):                                 ║
+# ║    sudo apt-get install tesseract-ocr poppler-utils libreoffice          ║
+# ║                                                                          ║
+# ║  SYSTEM DEPS (macOS — run once):                                         ║
+# ║    brew install tesseract poppler libreoffice                            ║
+# ╚══════════════════════════════════════════════════════════════════════════╝
+
+# ── Core UI ────────────────────────────────────────────────────────────────
+gradio>=4.0.0
+
+# ── Groq AI ────────────────────────────────────────────────────────────────
+groq>=0.9.0
+langchain-groq>=0.1.0
+langchain>=0.2.0
+
+# ── Word / DOCX ────────────────────────────────────────────────────────────
+python-docx>=1.1.0
+docx2pdf>=0.1.8            # Word → PDF (uses LibreOffice or MS Word)
+
+# ── PDF → Word ─────────────────────────────────────────────────────────────
+pdf2docx>=0.5.8            # Text-based PDF → Word
+
+# ── PDF → Images (for scanned PDF OCR) ────────────────────────────────────
+pdf2image>=1.17.0          # Requires poppler-utils system package
+
+# ── OCR (Tesseract fallback) ───────────────────────────────────────────────
+pytesseract>=0.3.13        # Requires tesseract-ocr system package
+
+# ── Image processing ───────────────────────────────────────────────────────
+Pillow>=10.0.0
+
+# ── Excel ──────────────────────────────────────────────────────────────────
+openpyxl>=3.1.0
+xlrd>=2.0.1                # Reading legacy .xls files
+
+# ── Data manipulation ──────────────────────────────────────────────────────
+pandas>=2.0.0
+numpy>=1.24.0
+
+# ── Encoding detection ─────────────────────────────────────────────────────
+chardet>=5.0.0
